@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import usagi from "./assets/usagi.png"
 import kawa from "./assets/kawa.png"
 import chika from "./assets/chika.png"
-import lateral from "./assets/lateral.png"
+import flores from "./assets/flores.png"
 import fondoTexto from "./assets/fondo-texto.png"
 import adornillo from "./assets/adornillo.png"
 
@@ -15,7 +15,7 @@ const cuteMessages = [
   "Eres lo mejor que me ha pasado.",
 ].map((msg) => `${msg} ♥`)
 
-const imagesToPreload = [usagi, kawa, chika, lateral, fondoTexto, adornillo]
+const imagesToPreload = [usagi, kawa, chika, flores, fondoTexto, adornillo]
 
 function App() {
   const [loading, setLoading] = useState(true)
