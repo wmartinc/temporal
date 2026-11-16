@@ -19,12 +19,12 @@ body::after {
   content: "";
   position: fixed;
   top: 0;
-  width: clamp(28px, 8vw, 100px);
+  width: clamp(22px, 6vw, 80px);
   height: 100vh;
-  background-image: url("./assets/lateral.png");
+  background-image: url("./assets/flores.png");
   background-repeat: repeat-y;
-  background-position: center top;
-  background-size: 100% 16vh;
+  background-position: center clamp(70px, 11vw, 120px);
+  background-size: 100% 12vh;
   pointer-events: none;
   z-index: 0;
 }
@@ -97,6 +97,7 @@ body::after {
   from {
     width: 0%;
   }
+
   to {
     width: 100%;
   }
@@ -120,7 +121,7 @@ body::after {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: clamp(60px, 10vw, 110px);
+  height: clamp(40px, 7vw, 80px);
   background-repeat: repeat-x;
   background-position: bottom center;
   background-size: auto 100%;
@@ -133,7 +134,7 @@ body::after {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: clamp(2rem, 5vw, 4rem) calc(clamp(28px, 8vw, 100px) + clamp(0.75rem, 2vw, 1.5rem)) 2rem;
+  padding: clamp(2rem, 5vw, 4rem) calc(clamp(22px, 6vw, 80px) + clamp(0.75rem, 2vw, 1.5rem)) 2rem;
   text-align: center;
 }
 
