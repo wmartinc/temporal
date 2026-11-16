@@ -68,17 +68,21 @@ function App() {
         aria-hidden="true"
       />
       <div className="side-flowers side-flowers-left" aria-hidden="true">
-        <img src={flores} alt="" className="side-flower" />
-        <img src={flores} alt="" className="side-flower" />
-        <img src={flores} alt="" className="side-flower" />
+        {Array.from({ length: 18 }).map((_, i) => (
+          <img key={i} src={flores} alt="" className="side-flower" />
+        ))}
       </div>
       <div className="side-flowers side-flowers-right" aria-hidden="true">
-        <img src={flores} alt="" className="side-flower" />
-        <img src={flores} alt="" className="side-flower" />
-        <img src={flores} alt="" className="side-flower" />
+        {Array.from({ length: 18 }).map((_, i) => (
+          <img key={i} src={flores} alt="" className="side-flower" />
+        ))}
       </div>
       <main className="page">
-        <h1 className="title">Ya me gané a la mejor novia del mundo</h1>
+        <h1 className="title">
+          Ya tengo
+          <br />
+          a la mejor novia del mundo
+        </h1>
         <div className="content-wrapper">
           <img src={usagi} alt="" className="content-corner content-corner-left" aria-hidden="true" />
           <img src={kawa} alt="" className="content-corner content-corner-right" aria-hidden="true" />
