@@ -14,28 +14,29 @@ body {
   position: relative;
 }
 
-body::before,
-body::after {
-  content: "";
+.side-flowers {
   position: fixed;
   top: 50%;
-  width: clamp(20px, 5vw, 70px);
-  height: 36vh;
-  background-image: url("./assets/flores.png");
-  background-repeat: repeat-y;
-  background-position: center top;
-  background-size: 100% 12vh;
-  pointer-events: none;
-  z-index: 0;
   transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  z-index: 0;
+  pointer-events: none;
 }
 
-body::before {
+.side-flowers-left {
   left: 0;
 }
 
-body::after {
+.side-flowers-right {
   right: 0;
+}
+
+.side-flower {
+  width: clamp(20px, 5vw, 70px);
+  height: auto;
+  display: block;
 }
 
 #root {
@@ -176,7 +177,7 @@ body::after {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: clamp(140px, 60%, 420px) auto;
-  opacity: 0.75;
+  opacity: 0.30;
   z-index: -1;
 }
 

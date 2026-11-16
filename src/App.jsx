@@ -67,6 +67,16 @@ function App() {
         style={{ backgroundImage: `url(${adornillo})` }}
         aria-hidden="true"
       />
+      <div className="side-flowers side-flowers-left" aria-hidden="true">
+        <img src={flores} alt="" className="side-flower" />
+        <img src={flores} alt="" className="side-flower" />
+        <img src={flores} alt="" className="side-flower" />
+      </div>
+      <div className="side-flowers side-flowers-right" aria-hidden="true">
+        <img src={flores} alt="" className="side-flower" />
+        <img src={flores} alt="" className="side-flower" />
+        <img src={flores} alt="" className="side-flower" />
+      </div>
       <main className="page">
         <h1 className="title">Ya me gané a la mejor novia del mundo</h1>
         <div className="content-wrapper">
