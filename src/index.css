@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f8d7f0, #e6d9ff);
+  position: relative;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  width: clamp(90px, 12vw, 140px);
+  height: 100vh;
+  background-image: url("./assets/fondos.png");
+  background-repeat: repeat-y;
+  background-position: center top;
+  background-size: 100% 25vh;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before {
+  left: 0;
+}
+
+body::after {
+  right: 0;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem clamp(110px, 15vw, 170px) 2rem;
+  text-align: center;
+}
+
+.title {
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #000;
+}
+
+.content-wrapper {
+  position: relative;
+  margin: auto 0;
+  max-width: 700px;
+  padding: clamp(5.5rem, 12vw, 8rem) 1rem 10rem;
+}
+
+.content-corner {
+  position: absolute;
+  top: 0;
+  width: clamp(84px, 12vw, 130px);
+  height: auto;
+}
+
+.content-corner-left {
+  left: 0;
+}
+
+.content-corner-right {
+  right: 0;
+}
+
+.content {
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  line-height: 1.7;
+  color: #2b2b2b;
+  background-image: url("./assets/fondo-texto.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: calc(85% - 140px) auto;
+}
+
+.content-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: auto;
+}
