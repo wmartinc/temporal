@@ -19,7 +19,7 @@ body::after {
   content: "";
   position: fixed;
   top: 0;
-  width: clamp(90px, 12vw, 140px);
+  width: clamp(48px, 12vw, 140px);
   height: 100vh;
   background-image: url("./assets/fondos.png");
   background-repeat: repeat-y;
@@ -48,13 +48,13 @@ body::after {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4rem clamp(110px, 15vw, 170px) 2rem;
+  padding: clamp(2rem, 5vw, 4rem) calc(clamp(48px, 12vw, 140px) + clamp(0.75rem, 2vw, 1.5rem)) 2rem;
   text-align: center;
 }
 
 .title {
   font-family: "Great Vibes", cursive;
-  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-size: clamp(1.8rem, 5vw, 5rem);
   font-weight: 400;
   line-height: 1.2;
   color: #000;
@@ -64,13 +64,14 @@ body::after {
   position: relative;
   margin: auto 0;
   max-width: 700px;
-  padding: clamp(5.5rem, 12vw, 8rem) 1rem 10rem;
+  width: 100%;
+  padding: clamp(3.5rem, 10vw, 8rem) clamp(0.5rem, 2vw, 1rem) clamp(6.5rem, 18vw, 10rem);
 }
 
 .content-corner {
   position: absolute;
   top: 0;
-  width: clamp(84px, 12vw, 130px);
+  width: clamp(52px, 10vw, 130px);
   height: auto;
 }
 
@@ -83,14 +84,23 @@ body::after {
 }
 
 .content {
+  position: relative;
   font-family: system-ui, "Segoe UI", Roboto, sans-serif;
-  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  font-size: clamp(0.9rem, 1.8vw, 1.25rem);
   line-height: 1.7;
   color: #2b2b2b;
+}
+
+.content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background-image: url("./assets/fondo-texto.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: calc(85% - 140px) auto;
+  background-size: clamp(140px, 60%, 420px) auto;
+  opacity: 0.75;
+  z-index: -1;
 }
 
 .content-bottom {
@@ -98,6 +108,6 @@ body::after {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 150px;
+  width: clamp(90px, 18vw, 150px);
   height: auto;
 }
