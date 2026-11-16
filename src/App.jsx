@@ -83,11 +83,6 @@ function App() {
           <img src={chika} alt="" className="content-bottom" aria-hidden="true" />
         </div>
       </main>
-      <div
-        className="bottom-decor"
-        style={{ backgroundImage: `url(${lateral})` }}
-        aria-hidden="true"
-      />
     </>
   )
 }

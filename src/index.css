@@ -18,15 +18,16 @@ body::before,
 body::after {
   content: "";
   position: fixed;
-  top: 0;
+  top: 50%;
   width: clamp(28px, 8vw, 100px);
-  height: 100vh;
+  height: 48vh;
   background-image: url("./assets/lateral.png");
   background-repeat: repeat-y;
   background-position: center top;
   background-size: 100% 16vh;
   pointer-events: none;
   z-index: 0;
+  transform: translateY(-50%);
 }
 
 body::before {
@@ -110,19 +111,6 @@ body::after {
   height: clamp(60px, 10vw, 110px);
   background-repeat: repeat-x;
   background-position: top center;
-  background-size: auto 100%;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.bottom-decor {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: clamp(60px, 10vw, 110px);
-  background-repeat: repeat-x;
-  background-position: bottom center;
   background-size: auto 100%;
   z-index: 0;
   pointer-events: none;
