@@ -19,12 +19,12 @@ body::after {
   content: "";
   position: fixed;
   top: 50%;
-  width: clamp(28px, 8vw, 100px);
-  height: 48vh;
+  width: clamp(20px, 5vw, 70px);
+  height: 36vh;
   background-image: url("./assets/flores.png");
   background-repeat: repeat-y;
   background-position: center top;
-  background-size: 100% 16vh;
+  background-size: 100% 12vh;
   pointer-events: none;
   z-index: 0;
   transform: translateY(-50%);
@@ -121,13 +121,14 @@ body::after {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: clamp(2rem, 5vw, 4rem) calc(clamp(28px, 8vw, 100px) + clamp(0.75rem, 2vw, 1.5rem)) 2rem;
+  padding: clamp(3rem, 8vw, 6rem) calc(clamp(20px, 5vw, 70px) + clamp(0.75rem, 2vw, 1.5rem)) 2rem;
   text-align: center;
 }
 
 .title {
   position: relative;
   z-index: 1;
+  margin-top: clamp(2rem, 8vh, 5rem);
   font-family: "Great Vibes", cursive;
   font-size: clamp(1.8rem, 5vw, 5rem);
   font-weight: 400;
