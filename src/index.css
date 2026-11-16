@@ -21,7 +21,7 @@ body::after {
   top: 0;
   width: clamp(28px, 8vw, 100px);
   height: 100vh;
-  background-image: url("./assets/fondos.png");
+  background-image: url("./assets/lateral.png");
   background-repeat: repeat-y;
   background-position: center top;
   background-size: 100% 16vh;
@@ -102,21 +102,30 @@ body::after {
   }
 }
 
-.side-decor {
+.top-decor {
   position: fixed;
-  top: clamp(0.5rem, 2vw, 1.5rem);
-  width: clamp(40px, 7vw, 90px);
-  height: auto;
-  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: clamp(60px, 10vw, 110px);
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: auto 100%;
+  z-index: 0;
   pointer-events: none;
 }
 
-.side-decor-left {
-  left: calc(clamp(28px, 8vw, 100px) + 0.25rem);
-}
-
-.side-decor-right {
-  right: calc(clamp(28px, 8vw, 100px) + 0.25rem);
+.bottom-decor {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: clamp(60px, 10vw, 110px);
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  background-size: auto 100%;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .page {
@@ -129,6 +138,8 @@ body::after {
 }
 
 .title {
+  position: relative;
+  z-index: 1;
   font-family: "Great Vibes", cursive;
   font-size: clamp(1.8rem, 5vw, 5rem);
   font-weight: 400;
@@ -138,6 +149,7 @@ body::after {
 
 .content-wrapper {
   position: relative;
+  z-index: 1;
   margin: auto 0;
   max-width: 700px;
   width: 100%;

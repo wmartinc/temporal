@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import usagi from "./assets/usagi.png"
 import kawa from "./assets/kawa.png"
 import chika from "./assets/chika.png"
-import fondos from "./assets/fondos.png"
+import lateral from "./assets/lateral.png"
 import fondoTexto from "./assets/fondo-texto.png"
 import adornillo from "./assets/adornillo.png"
 
@@ -15,7 +15,7 @@ const cuteMessages = [
   "Eres lo mejor que me ha pasado.",
 ].map((msg) => `${msg} ♥`)
 
-const imagesToPreload = [usagi, kawa, chika, fondos, fondoTexto, adornillo]
+const imagesToPreload = [usagi, kawa, chika, lateral, fondoTexto, adornillo]
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -62,8 +62,11 @@ function App() {
           </div>
         </div>
       )}
-      <img src={adornillo} alt="" className="side-decor side-decor-left" aria-hidden="true" />
-      <img src={adornillo} alt="" className="side-decor side-decor-right" aria-hidden="true" />
+      <div
+        className="top-decor"
+        style={{ backgroundImage: `url(${adornillo})` }}
+        aria-hidden="true"
+      />
       <main className="page">
         <h1 className="title">Ya me gané a la mejor novia del mundo</h1>
         <div className="content-wrapper">
@@ -80,6 +83,11 @@ function App() {
           <img src={chika} alt="" className="content-bottom" aria-hidden="true" />
         </div>
       </main>
+      <div
+        className="bottom-decor"
+        style={{ backgroundImage: `url(${lateral})` }}
+        aria-hidden="true"
+      />
     </>
   )
 }
